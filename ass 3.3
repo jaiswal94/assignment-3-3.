@@ -1,0 +1,42 @@
+There major components of Hadoop 2.x are as:-
+a)HDFS
+b).YARN
+c).MapReduce.
+  MapReduce which is responsible for processing  and HDFS which is responsible for storage contain 
+  both Masternode and slave node as Components.
+  
+  
+ Master Node has two components:
+1)Resource Manager(YARN or MapReduce v2)
+
+It is a Per-Cluster Level Component and is divided into two components:
+a).Scheduler-
+1) It is Responsible to scheduler required resources to Applications (that is Per-Application Master).
+2)It does only scheduling.
+3)It does care about monitoring or tracking of those Applications.
+
+
+b)Application Manager
+1)Application Master is a per-application level component. It is responsible for Managing assigned Application Life cycle.
+2).It interacts with both Resource Manager’s Scheduler and Node Manager
+3).It interacts with Scheduler to acquire required resources.
+4)It interacts with Node Manager to execute assigned tasks and monitor those task’s status.
+
+
+2).Namenode-this is HDFS component and is used to store Meta data.
+
+
+slave node has two components:-
+1)Node Manager-
+Node Manager is a Per-Node Level component which is responsible for:
+a).Managing the life-cycle of the Container.
+b).Monitoring each Container’s Resources utilization.
+
+Container:
+
+Each Master Node or Slave Node contains set of Containers. In this diagram, Main Node’s Name Node is not showing the Containers. However, it also contains a set of Containers.
+Container is a portion of Memory in HDFS (Either Name Node or Data Node).
+
+
+2).data node-
+ Data Node is used to store actual our application Big Data.
